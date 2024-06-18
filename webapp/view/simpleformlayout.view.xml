@@ -1,0 +1,70 @@
+<mvc:View controllerName="com.incture.project1.controller.simpleformlayout"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Page title="Simpleform Layout" >
+        <content>
+            <ObjectHeader title="Desktop" number="300000" numberUnit="INR" backgroundDesign="Translucent">
+                <attributes>
+                    <ObjectAttribute title="Desktop Id" text="DSK789"></ObjectAttribute>
+                    <ObjectAttribute title="DSK Description" text="High defination screen"></ObjectAttribute>
+                </attributes>
+                <statuses>
+                    <ObjectStatus text="Approved"></ObjectStatus>
+                </statuses>
+            </ObjectHeader>
+            <IconTabBar >
+                <items>
+                    <IconTabFilter icon="sap-icon://hint">
+                    <f:SimpleForm title="Employee Information two colunm style simpleform" editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="3" emptySpanM="3">
+                <!-- editable true makes proper alignment and editable false makes alignment wrong  -->
+                <f:content>
+                    <Label text="Employee Id" />
+                    <Input/>
+                    <Label text="Employee Name" />
+                    <Input/>
+                    <Label text="Employee Designation" />
+                    <Input/>
+                    <Label text="Employee salary" />
+                    <Input/>
+                    <Label text="Employee skills"/>
+                    <Input/>
+                    <!-- both container here makes it as four column style -->
+                </f:content>
+            </f:SimpleForm></IconTabFilter>
+                    <IconTabFilter icon="sap-icon://notes"></IconTabFilter>
+
+                </items>
+            </IconTabBar>
+            <f:SimpleForm title="Employee Information two column style simpleform" editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="3" emptySpanM="3">
+                <!-- editable true makes proper alignment and editable false makes alignment wrong  -->
+                <f:content>
+                    <core:Title text="Container1"></core:Title>
+                    <Label text="Employee Id" required="true" />
+                    <Input id="empid"/>
+                    <Label text="Employee Name" required="true"/>
+                    <Input id="empname" maxLength="20" />
+                    <core:Title text="container2"></core:Title>
+                    <Label text="Employee Designation" required="true"/>
+                    <Input id="empdesg"/>
+                    <Label text="Employee email" required="true"/>
+                    <Input id="empmail"/>
+                    <Label text="Employee skills" required="true"/>
+                    <Input id="empskill"/>
+                    <!-- both container here makes it as four column style -->
+                </f:content>
+            </f:SimpleForm>
+            
+        </content>
+        <footer>
+        <Bar >
+        <contentRight>
+        <Button id="idbtn" text="Submit" press="onsubmit" type="Accept"></Button>
+        <Button id="idbtn2" text="Preview" press="onpreview" type="Emphasized"></Button>
+        </contentRight>
+        </Bar>
+        </footer>
+    </Page>
+</mvc:View>

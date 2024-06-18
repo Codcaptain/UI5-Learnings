@@ -1,0 +1,109 @@
+<mvc:View xmlns:core="sap.ui.core" controllerName="com.incture.project1.controller.binding"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <Page title="binding page">
+    <content>
+    <Table items="{/aemployee}" mode="SingleSelectMaster" selectionChange="onchanging">
+    <headerToolbar>
+    <Toolbar><Text text="Header Tool can be made inside list" class="sapMH3FontSize">
+    </Text>
+    <ToolbarSpacer ></ToolbarSpacer>
+    <SearchField width="30%" liveChange="onsearch"></SearchField>
+    <Button icon="sap-icon://sort-ascending" press="sortasc"></Button>
+        <Button icon="sap-icon://sort-descending" press="sortdes"></Button>
+
+    </Toolbar>
+    </headerToolbar>
+    <columns>
+    <Column >
+    <Text text="Employee ID"></Text>
+    </Column>
+    <Column ><Text text="Employee name"></Text></Column>
+    <Column ><Text text="Employee desg"></Text></Column>
+    <Column ><Text text="Employee email"></Text></Column>
+    <Column ><Text text="Employee skill"></Text></Column>
+    </columns>
+    <items>
+    <ColumnListItem ><cells>
+    <Text text="{empid}"></Text>
+        <Text text="{empname}"></Text>
+
+    <Text text="{empdesg}"></Text>
+
+    <Text text="{empemail}"></Text>
+    <Text text="{empskill}"></Text>
+
+    </cells></ColumnListItem>
+    
+    </items>
+    </Table>
+    <List items="{/aemployee}" id="idlist" mode="SingleSelectMaster" selectionChange="onchanging">
+    <headerToolbar>
+    <Toolbar><Text text="Header Tool can be made inside list" class="sapMH3FontSize">
+    </Text>
+    <ToolbarSpacer ></ToolbarSpacer>
+    <SearchField width="30%" liveChange="onsearch"></SearchField>
+    <Button icon="sap-icon://sort-ascending" press="sortasc"></Button>
+        <Button icon="sap-icon://sort-descending" press="sortdes"></Button>
+
+    </Toolbar>
+    </headerToolbar>
+    <ObjectListItem title="{empname}" number="{empid}" numberUnit="{empdesg}">
+    <attributes>
+    <ObjectAttribute title="skill" text="{empskill}"></ObjectAttribute>
+     <ObjectAttribute title="email" text="{empemail}"></ObjectAttribute>
+    </attributes>
+    <!-- email can be added as a ojectattribute -->
+    <firstStatus>
+    <ObjectStatus text="{emploc}"></ObjectStatus></firstStatus>
+    </ObjectListItem>
+    
+    </List>
+
+    
+        <f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanL="4" labelSpanM="4" emptySpanL="3" emptySpanM="3">
+            <f:content>
+            <Label text="multiple selected dropdown"/>
+            <Select items="{/aRelation}" change="onselect">
+            <core:Item text="{relation}"></core:Item>
+            </Select>
+            <Label text="multiple selected combobox"/>
+            <ComboBox items="{/aRelation}" selectionChange="oncombo">
+            <core:Item text="{relation}"></core:Item>
+            </ComboBox>
+            <Label text="multiple selected multicombobox"/>
+            <MultiComboBox items="{/aLanguage}" selectionFinish="onmulticombo">
+            <core:Item text="{language}"></core:Item>
+            </MultiComboBox>
+            <Label text="Radiobuttongroup"/>
+            <RadioButtonGroup buttons="{/aGender}" columns="2" select="ongender">
+            <RadioButton text="{gender}"></RadioButton>
+            </RadioButtonGroup>
+            <Label text="want to learn ui5" />
+            <CheckBox select="onselect"></CheckBox>
+
+            <!-- dropdown multiple ui element -->
+
+
+
+                <Label text="Employee id"></Label>
+                <Input value="{/empid}"/>
+                <Label text="Employee name"></Label>
+                <Input value="{/empname}"/>
+                <Label text="Employee skills"></Label>
+                <Input value="{/empskill}"/>
+                <Label text="Employee email"></Label>
+                <Input value="{/empemail}"/>
+                <Label text="Employee designation"></Label>
+                <Input value="{/empdesg}"/>
+            </f:content>
+        </f:SimpleForm>
+        </content>
+        <footer>
+        <Bar >
+        <contentRight><Button text="Submit" press="onsubmit" type="Accept"></Button></contentRight></Bar></footer>
+    </Page>
+</mvc:View>

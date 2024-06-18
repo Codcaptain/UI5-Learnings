@@ -1,0 +1,36 @@
+<mvc:View controllerName="com.incture.project1.controller.first"
+   xmlns:html="http://www.w3.org/1999/xhtml"
+   xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+   xmlns="sap.m">
+
+   <Page id="page" title="i am the first view">
+      <content>
+     
+         <Text id="idtext" text="three input text fields are there they are label ,input,text" class="sapMH3FontSize" textAlign="Center" width="100%"></Text>
+         <Text id="idtext1" text="welcome to incture" class="sapMH3FontSize" textAlign="Center" width="100%"></Text>
+         <Label id="idLabel" text="Enter your name" class="sapUiSmallMargin" required="true" design="Bold"></Label>
+         <Input id="idinput" width="30%" placeholder="name...." maxLength="10"></Input>
+         <Label id="idLabel1" text="Enter Alingment" class="sapUiSmallMargin" required="true" design="Bold"></Label>
+         <Input id="idinput1" width="30%" placeholder="alignment of the text" value="" maxLength="10"></Input>
+         <!-- the input field here is responsible for the alignment of the text -->
+         <Button text="GOtolayout" press="layout" type="Accept"/>
+         <Button id="changebtn" text=" CHANGE " type="Accept" press="onchange"/>
+         <Button id="Hide" text="Hide" type="Emphasized" press="hide"/>
+         <!-- <Input width="30%" value="Meenakshi"></Input>  -->
+         <!-- meenakhsi will come bydefault -->
+        <Button text="bindingview" press="onbinding"></Button>
+         <Button id="second" text="Go to secondview" type="Accept" press="onsubmit"></Button>
+      </content>
+      <footer>
+         <Bar>
+            <contentRight>
+               <Button text="Go to secondview" press="onsubmit" type="Ghost"></Button>
+               <Button text="simpleformlayout" press="simpleform" type="Emphasized"></Button>
+            </contentRight>
+         </Bar>
+      </footer>
+   </Page>
+
+
+
+</mvc:View>

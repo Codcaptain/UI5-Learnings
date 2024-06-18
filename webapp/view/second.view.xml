@@ -1,0 +1,29 @@
+<mvc:View controllerName="com.incture.project1.controller.second"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+    <Page title="i am the second view" class="bgimage" showNavButton="true" navButtonPress="onback">
+        <content>
+            <FlexBox justifyContent="Center" alignItems="Center" height="100%">
+                <VBox>
+                    <Label text="Login page" design="Bold" class="mytextcolor mytextfont"/>
+                    <Label text="Username"  design="Bold" class="sapUiSmallMarginTop mytextcolor mytextfont"/>
+                    <!-- class here sapUiSmallMargin is case sensitive it basically gives the gap /space between two ui element  -->
+                    <Input width="400px" placeholder="username" />
+                    <Label text="Password" design="Bold" class="sapUiSmallMarginTop mytext2"/>
+                    <Input width="400px" placeholder="password" class="sapUiSmallMarginTop mytextfont" type="Password"/>
+                    <!-- //password hides chars in dots  -->
+                    <Button text="Login" width="400px" type="Emphasized" class="sapUiSmallMarginTop"/>
+                </VBox>
+            </FlexBox>
+            <!-- showNavButton="true" navButtonPress="onback" it gives a button to return to back page must be declare in the page-->
+        </content>
+        <footer>
+            <Bar>
+                <contentLeft>
+                    <Button text="Go to thirdview" type="Emphasized" press="onsubmit" />
+                </contentLeft>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>

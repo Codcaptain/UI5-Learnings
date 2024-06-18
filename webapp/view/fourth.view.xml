@@ -1,0 +1,66 @@
+<mvc:View controllerName="com.incture.project1.controller.fourth"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+   <Page title="i am the fourth view">
+   
+   <content>
+   <Button text="go to firstview" type="Accept" press="onsubmit"></Button></content>
+   <Table
+                id="idTableUsers"
+                items="{users>/}"
+                mode="SingleSelectMaster"
+                selectionChange="onSelectUser"
+            >
+                <headerToolbar>
+                    <Toolbar>
+                        <Text text="Users Data" />
+                    </Toolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column>
+                        <Text text="S.No" />
+                    </Column>
+                    <Column>
+                        <Text text="Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Username" />
+                    </Column>
+                    <Column>
+                        <Text text="Email" />
+                    </Column>
+                    <Column>
+                        <Text text="Address" />
+                    </Column>
+                    <Column>
+                        <Text text="Phone no." />
+                    </Column>
+                    <Column>
+                        <Text text="Website" />
+                    </Column>
+                    <Column>
+                        <Text text="Company" />
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{users>id}" />
+                            <Text text="{users>name}" />
+                            <Text text="{users>username}" />
+                            <Text text="{users>email}" />
+                            <Text
+                                text="{users>address/street}, {users>address/suite}, {users>address/city}"
+                            />
+                            <Text text="{users>phone}" />
+                            <Text text="{users>website}" />
+                            <Text text="{users>company/name}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+   </Page>
+</mvc:View>

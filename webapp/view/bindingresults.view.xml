@@ -1,0 +1,25 @@
+<mvc:View controllerName="com.incture.project1.controller.bindingresults"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <Page title="bindingresults" showNavButton="true" navButtonPress="back" >
+        <f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="3" emptySpanM="3">
+            <f:content>
+
+                <Label required="true"  text="Employee Id" />
+                <Text id="txtid" text="{empid}"/>
+                <Label text="Employee Name" required="true"/>
+                <Text id="txtname" text="{empname}" />
+                <Label text="Employee Designation" required="true"/>
+                <Text id="txtdesg" text="{empdesg}"/>
+                <Label text="Employee email" required="true"/>
+                <Text id="txtmail" text="{empemail}"/>
+                <Label text="Employee skills" required="true"/>
+                <Text id="txtskill" text="{empskill}"/>
+            </f:content>
+        </f:SimpleForm>
+    </Page>
+</mvc:View>
+

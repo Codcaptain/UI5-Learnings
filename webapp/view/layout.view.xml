@@ -1,0 +1,110 @@
+<mvc:View controllerName="com.incture.project1.controller.layout"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <Page title="ui layouts">
+        <content>
+            <HBox>
+                <Button text="b1" type="Accept" />
+                <Button text="b2" type="Reject" />
+                <Button text="b3" type="Unstyled" />
+            </HBox>
+            <VBox>
+                <Button text="b1" type="Ghost" />
+                <Button text="b2" type="Emphasized" />
+                <Button text="b3" type="Transparent" />
+            </VBox>
+
+            <!-- the 3 btns can align any where center ,begin,end -->
+            <FlexBox justifyContent="Center" alignItems="Center" width="100%">
+                <Button text="flexboxclicks" type="Emphasized" />
+            </FlexBox>
+
+            <Panel headerText="Incture Registration Page">
+                <l:Grid vSpacing="0" width="50%">
+                    <!-- Two coloumn style layout Grid structure -->
+                    <l:content>
+                        <Label text="Employee Id">
+                            <layoutData>
+                                <l:GridData span="L6 M6" />
+                            </layoutData>
+                        </Label>
+                        <Input>
+                            <layoutData>
+                                <l:GridData span="L6 M6" />
+                            </layoutData>
+                        </Input>
+                        <Label text="Employee name ">
+                            <layoutData>
+                                <l:GridData span="L6 M6" />
+                            </layoutData>
+                        </Label>
+                        <Input>
+                            <layoutData>
+                                <l:GridData span="L6 M6" />
+                            </layoutData>
+                        </Input>
+                        <Label text="Employee salary">
+                            <layoutData>
+                                <l:GridData span="L6 m6" />
+                            </layoutData>
+                        </Label>
+                        <Input>
+                            <layoutData>
+                                <l:GridData span="L6 " />
+                            </layoutData>
+                        </Input>
+                    </l:content>
+                </l:Grid>
+            </Panel>
+            <Panel headerText="Four colounm structure layout">
+                <l:Grid vSpacing="0" width="100%">
+                    <l:content>
+                        <Label text="Employee Id " class="sapUiSmallMargin">
+                            <layoutData>
+                                <l:GridData span="L3 M3"></l:GridData>
+                            </layoutData>
+                        </Label>
+                        <Input class="sapUiSmallMargin">
+                            <layoutData>
+                                <l:GridData span="L3 M3"></l:GridData>
+                            </layoutData>
+                        </Input>
+                        <Label text="Employee name" class="sapUiSmallMargin">
+                            <layoutData>
+                                <l:GridData span="L3 M3"></l:GridData>
+                            </layoutData>
+                        </Label>
+                        <Input class="sapUiSmallMargin">
+                            <layoutData >
+                                <l:GridData span="L3 M3"></l:GridData>
+                            </layoutData>
+                        </Input>
+                        <Label text="Employee dedpt." class="sapUiSmallMargin">
+                            <layoutData>
+                                <l:GridData span="L3 M3"></l:GridData>
+                            </layoutData>
+                        </Label>
+                        <Input class="sapUiSmallMargin">
+                            <layoutData>
+                                <l:GridData span="L3 M3"></l:GridData>
+                            </layoutData>
+                        </Input>
+                           <Label text="Employee competency" class="sapUiSmallMargin">
+                            <layoutData>
+                                <l:GridData span="L3 M3"></l:GridData>
+                            </layoutData>
+                        </Label>
+                        <Input class="sapUiSmallMargin">
+                            <layoutData>
+                                <l:GridData span="L3 M3"></l:GridData>
+                            </layoutData>
+                        </Input>
+                    </l:content>
+                </l:Grid>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>
